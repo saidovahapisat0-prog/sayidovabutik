@@ -1,0 +1,286 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: #050102;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+}
+
+/* ---------------------------------------------------------------- */
+/* KOMPÜTER (DESKTOP) ÜÇÜN GENİŞ VEB GÖRÜNÜŞÜ (Horizontal / Veb Sayt) */
+/* ---------------------------------------------------------------- */
+.site-wrapper {
+    display: flex;
+    width: 100%;
+    max-width: 1100px;
+    height: 680px;
+    background: #0f0205;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.95), 0 0 35px rgba(212, 175, 55, 0.2);
+    border: 1px solid rgba(212, 175, 55, 0.35);
+    margin: 20px;
+}
+
+/* Kompüterdə sol tərəfdə çıxan böyük şəkil sahəsi */
+.desktop-image-side {
+    flex: 1;
+    position: relative;
+    background-image: url('../images/sekil.jpeg');
+    background-size: cover;
+    background-position: top center;
+    display: flex;
+    align-items: flex-end;
+    padding: 40px;
+}
+
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(15,2,5,0.75) 100%);
+}
+
+.brand-heritage {
+    position: relative;
+    z-index: 2;
+}
+
+.brand-heritage h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 36px;
+    letter-spacing: 5px;
+    color: #ffffff;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.8);
+}
+
+.brand-heritage p {
+    font-family: 'Cinzel', serif;
+    font-size: 12px;
+    letter-spacing: 4px;
+    color: #d4af37;
+    margin-top: 5px;
+}
+
+.brand-heritage span {
+    display: inline-block;
+    font-size: 10px;
+    letter-spacing: 6px;
+    color: #e8dcc4;
+    margin-top: 10px;
+    opacity: 0.8;
+}
+
+/* Kompüterdə sağ tərəfdəki menyu qutusu */
+.card-container {
+    position: relative;
+    width: 450px;
+    height: 100%;
+    background: #090103;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow-y: auto;
+}
+
+/* Mobil fon şəkli (kompüterdə gizlidir, yalnız telefonda işləyir) */
+.card-bg {
+    display: none;
+}
+
+.card-overlay {
+    display: none;
+}
+
+/* Məzmun Bloku */
+.card-content {
+    position: relative;
+    z-index: 3;
+    padding: 30px;
+    text-align: center;
+}
+
+.brand-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border: 1px solid #d4af37;
+    border-radius: 10px;
+    font-size: 9px;
+    letter-spacing: 2px;
+    color: #d4af37;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    background: rgba(15, 0, 5, 0.7);
+}
+
+.main-title {
+    font-family: 'Cinzel', serif;
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: #ffffff;
+    margin-bottom: 2px;
+}
+
+.sub-title {
+    font-family: 'Cinzel', serif;
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: #d4af37;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+.tagline {
+    font-size: 11px;
+    font-weight: 300;
+    font-style: italic;
+    color: #e8dcc4;
+    margin-bottom: 20px;
+}
+
+/* Düymələr */
+.links-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.link-btn {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 13px 18px;
+    background: rgba(25, 5, 10, 0.8);
+    border: 1px solid rgba(212, 175, 55, 0.35);
+    border-radius: 14px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.link-btn i {
+    font-size: 16px;
+    color: #d4af37;
+    width: 28px;
+}
+
+.link-btn:hover {
+    background: rgba(212, 175, 55, 0.25);
+    border-color: #d4af37;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+}
+
+.highlight-btn {
+    background: linear-gradient(135deg, #7a000a 0%, #3d0004 100%);
+    border-color: #d4af37;
+}
+
+.highlight-btn i {
+    color: #25d366;
+}
+
+/* Sosial Iconlar */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+
+.social-links a {
+    color: #d4af37;
+    font-size: 15px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    border: 1px solid rgba(212, 175, 55, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    background: rgba(15, 0, 5, 0.7);
+}
+
+.social-links a:hover {
+    background: #d4af37;
+    color: #000;
+    transform: scale(1.1);
+}
+
+/* ---------------------------------------------------------------- */
+/* MOBİL TELEFONLAR ÜÇÜN AVTOMATİK KEÇİD (Ekran kiçildikdə)         */
+/* ---------------------------------------------------------------- */
+@media (max-width: 768px) {
+    body {
+        padding: 0;
+        background-color: #050102;
+    }
+
+    .site-wrapper {
+        width: 100%;
+        height: 100vh;
+        max-height: 100vh;
+        border-radius: 0;
+        border: none;
+        margin: 0;
+        flex-direction: column;
+    }
+
+    /* Kompüter şəkli mobil ekranda gizlənir */
+    .desktop-image-side {
+        display: none;
+    }
+
+    /* Kart bütün ekranı tutur və arxa plana şəkil gəlir */
+    .card-container {
+        width: 100%;
+        height: 100vh;
+        background: transparent;
+        justify-content: flex-end;
+    }
+
+    .card-bg {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('../images/sekil.jpeg');
+        background-size: cover;
+        background-position: top center;
+        z-index: 1;
+    }
+
+    .card-overlay {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+            180deg,
+            rgba(0, 0, 0, 0.05) 0%,
+            rgba(10, 1, 3, 0.35) 42%,
+            rgba(10, 1, 3, 0.88) 68%,
+            rgba(8, 1, 2, 0.98) 100%
+        );
+        z-index: 2;
+    }
+}
